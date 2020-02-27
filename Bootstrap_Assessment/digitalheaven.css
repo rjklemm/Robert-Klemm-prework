@@ -1,0 +1,39 @@
+body {
+    background-color: #4489c9;
+}
+
+header {
+    color: rgb(25, 45, 228);
+    font-size: 18px;
+    font-family: Arial;
+    font-weight: bolder;
+    text-align: left;
+}
+
+h1 {
+    color: black;
+    font-size: 12px;
+    font-family: "Oxanium";
+    font-weight: lighter;
+    margin-top: 50px;
+}
+
+h2 {
+    color: rgb(202, 194, 72);
+    font-size: 60px;
+    font-family: "Yeon Sung";
+    margin-top: 30px;
+}
+
+button {
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 35px;
+}
+
+img {
+    position: relative;
+    top: 20px;
+}
