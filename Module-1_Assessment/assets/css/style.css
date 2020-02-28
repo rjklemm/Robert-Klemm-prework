@@ -7,34 +7,71 @@
 header {
     background-color: #ffffff;
     border-color: #cccccc;
+    border-size: 5px;
 }
 
 #name {
     background-color: #4aaaa5;
+    color: #ffffff;
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    margin-left: 16%;
+    font-size: 28px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    padding-top: 20px;
 }
 
 #links {
-
-
+    position: relative;
+    float: inline-end;
 }
 
-#profile {
-    scale: 50%;
-    
-}
 
 body {
+   background-image: url("../images/triangle-mosaic.png");
+}
+
+
+section {
     background-color: #ffffff;
     border-color: #dddddd;
+    margin-left: 15%;
+    margin-top: 40px;
+    margin-right: 15%;
 }
 
 h1 {
     color: #4aaaa5;
     font-family: 'Georgia', Times, Times New Roman, serif;
+    margin-left: 3%;
+    margin-top: 15px;
 }
 
 
+#divider {
+    width: 94%;
+    height: 5px;
+    background-color: #aaaaaa;
+    margin-left: 3%;
+}
+
+#profile {
+    position: relative;
+    height: 250px;
+    width: auto;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+
+p {
+}
+
+#p1 {
+}
+
 footer {
+    border: 10px, solid, #4aaaa5;
     background-color: #666666;
     text-align: center;
 }
