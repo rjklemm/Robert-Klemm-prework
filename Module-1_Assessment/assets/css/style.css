@@ -96,6 +96,24 @@ button {
     margin-left: 3%;
 }
 
+#portfolio {
+   height: 120px;
+   width: auto;
+}
+
+#captions {
+    background-color: #4aaaa5;
+    color: #ffffff;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    text-align: center;
+    height: 30px;
+    width: 240px;
+    position: relative;
+    bottom: 40px;
+
+}
+
+
 #bottomstripe {
     background-color: #4aaaa5;
     height: 7px;
