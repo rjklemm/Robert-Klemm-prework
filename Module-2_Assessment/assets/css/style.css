@@ -1,0 +1,39 @@
+* {
+    font-family: Georgia;
+    font-size: 20px;
+    background-image: url("../images/symphony.png");
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+div {
+    border-width: 5px;
+    border-style: dotted;
+    border-color: #333333;
+    margin-left: 9%;
+    margin-right: 9%;
+    float: inline-start;
+    height: 450px;;
+    width: 30%;
+}
+
+#left > img {
+    scale: 125%;
+    margin-top: 20%
+}
+
+#left > p { 
+    margin-top: 20%;
+}
+
+
+#right > p {
+    margin: 6%;
+}
