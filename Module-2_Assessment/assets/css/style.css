@@ -19,9 +19,16 @@ div {
     border-color: #333333;
     margin-left: 9%;
     margin-right: 9%;
-    float: inline-start;
-    height: 550px;;
-    width: 30%;
+    height: 550px;
+    width: 31%;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
 }
 
 #left > img {
@@ -37,3 +44,14 @@ div {
 #right > p {
     margin: 6%;
 }
+
+/* (Media query)
+  These rules take effect when the browser's width
+  is either 768px or less.
+
+@media screen and (max-width: 768px) {
+    
+    Insert browser-width dependent properties here.
+    
+}
+*/
