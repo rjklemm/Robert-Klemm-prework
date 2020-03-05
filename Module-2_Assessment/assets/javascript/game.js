@@ -111,6 +111,10 @@ const letterguess = function(event) {
             pastletters = ' ';
             correctletters = 0;
 
+            
+            guesses.innerText =  guessCount;
+            letters.innerText = pastletters;
+
             //pick random composer
             z = Math.floor(Math.random() * 12); //random number from 0 to 4
             if (z === 12) {
@@ -127,6 +131,8 @@ const letterguess = function(event) {
                 a++
             }
             wordblanks.innerText = gaps;
+            
+
         }
 
         //word solved 
@@ -138,6 +144,10 @@ const letterguess = function(event) {
             correctletters = 0;
             guessCount = 12;
             pastletters = ' ';
+
+            
+            guesses.innerText =  guessCount;
+            letters.innerText = pastletters;
 
             document.querySelector('#piece').src = composers[z][2]; //play sound by that composer
             document.querySelector('#nowplaying').innerText = 'Now Playing: ' + composers[z][3]; //message about what's playing now
@@ -157,6 +167,7 @@ const letterguess = function(event) {
                 a++
             }
             wordblanks.innerText = gaps;
+            
 
         }
     }
