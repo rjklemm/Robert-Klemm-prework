@@ -2,7 +2,7 @@
 Bob Klemm 3/2/2020 */
 
 var winTotal = 0;
-var guessCount = 15;
+var guessCount = 12;
 var pastletters = ' ';
 
 // moving parts (words/images) in the page
@@ -29,13 +29,20 @@ music.innerText = '(In the Style of Classical Music!)';
 var correctletters = 0;
 //var i = 0;
 
+//all composers (last name, picturefile, soundfile, piece)
 var composers = [
-    ['BACH', "assets/images/bach.jpg"],
-    ['BEETHOVEN', "assets/images/beethoven.jpg"],
-    ['BRAHMS', "assets/images/brahms.jpg"],
-    ['CHOPIN', "assets/images/chopin.jpg"],
-    ['DEBUSSY', "assets/images/debussy.jpg"]
-
+    ['BACH', "assets/images/bach.jpg","assets/sounds/Bach-minuet-in-g.mp3" , "Bach: Minuet in G"],
+    ['BEETHOVEN', "assets/images/beethoven.jpg", "assets/sounds/Moonlight-sonata-piano.mp3", "Beethoven: Moonlight Sonata"],
+    ['BRAHMS', "assets/images/brahms.jpg", "assets/sounds/Hungarian-dance-no-5-piano.mp3", "Brahms: Hungarian Dance No. 5"],
+    ['CHOPIN', "assets/images/chopin.jpg", "assets/sounds/Chopin-nocturne-op-9-no-2.mp3", "Chopin: Nocturne Op. 9 No. 2"],
+    ['DEBUSSY', "assets/images/debussy.jpg", "assets/sounds/Clair-de-lune-piano.mp3", "Debussy: Clair de Lune"],
+    ['DVORAK', "assets/images/dvorak.jpg", "assets/sounds/Humoresque-dvorak.mp3", "Dvorak: Humoresque"  ],
+    ['ELGAR', "assets/images/elgar.jpg", "assets/sounds/Salut-d-amour.mp3", "Elgar: Salut d'amour"],
+    ['GRIEG', "assets/images/grieg.jpg", "assets/sounds/Edvard-grieg-morning-mood.mp3", "Grieg: Morning Mood" ],
+    ['MOZART', "assets/images/mozart.jpg", "assets/sounds/Eine-Kleine-Nachtmusik.mp3", "Mozart: Eine Kleine Nachtmusik"],
+    ['SCHUBERT', "assets/images/schubert.jpg", "assets/sounds/Schubert-ave-maria.mp3", "Schubert: Ave Maria"],
+    ['SCHUMANN', "assets/images/schumann.jpg", "assets/sounds/Traumerei-piano-music.mp3", "Schumann: Traumerei"],
+    ['TCHAIKOVSKY', "assets/images/tchaikovsky.jpg", "assets/sounds/Waltz-of-the-flowers.mp3", "Tchaikovsky: Waltz of the Flowers"]
 ];
 
 
@@ -98,15 +105,15 @@ const letterguess = function(event) {
         }
 
         //run out of guesses
-        if (guessCount < 1) {
+        if (guessCount < 1 && correctletters < word.length) {
             message.innerText = 'Out of guesses. Try again. The answer was ' + word;
-            guessCount = 15;
+            guessCount = 12;
             pastletters = ' ';
             correctletters = 0;
 
             //pick random composer
-            z = Math.floor(Math.random() * 5); //random number from 0 to 4
-            if (z === 5) {
+            z = Math.floor(Math.random() * 12); //random number from 0 to 4
+            if (z === 12) {
                 z--
             }
 
@@ -129,17 +136,19 @@ const letterguess = function(event) {
             winTotal++ //increase win count
             wins.innerText = winTotal;
             correctletters = 0;
-            guessCount = 15;
+            guessCount = 12;
             pastletters = ' ';
 
+            document.querySelector('#piece').src = composers[z][2]; //play sound by that composer
+            document.querySelector('#nowplaying').innerText = 'Now Playing: ' + composers[z][3]; //message about what's playing now
+
             //pick random composer
-            z = Math.floor(Math.random() * 5); //random number from 0 to 4
-            if (z === 5) {
+            z = Math.floor(Math.random() * 12); //random number from 0 to 4
+            if (z === 12) {
                 z--
             }
 
             word = composers[z][0];
-
 
             a = 0; //setup of letter blanks
             gaps = '';
